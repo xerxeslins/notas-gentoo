@@ -4,8 +4,9 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 ## Índice de Navegação
 
 ### Portage e Otimizações de Compilação
-* [Otimizações Globais do make.conf](portage/make.conf.md) — Licenças, pacotes binários, Jumbo-build, march=native e tmpfs.
-* [Configurações de package.use e Ambientes](portage/package_use.md) — Flags específicas para pacotes e variáveis para o Chromium.
+* [make.conf](portage/make.conf.md) — Conteúdo do make.conf.
+* [tmpfs](tmpfs.md) — Configuração de tmpfs.
+* [env para Chromium](portage/env_chromium.md) — Configuração para compilar o Chromium.
 
 ### Configuração do Sistema e Ferramentas
 * [Rede e Conectividade](sistema/rede_audio.md) — Migração do backend do NetworkManager para o iwd.
