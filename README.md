@@ -4,7 +4,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 ## Índice de Navegação
 
 ### Portage e Otimizações de Compilação
-* [Otimizações Globais do make.conf](portage/otimizacao.md) — Licenças, pacotes binários, Jumbo-build, march=native e tmpfs.
+* [Otimizações Globais do make.conf](portage/make.conf.md) — Licenças, pacotes binários, Jumbo-build, march=native e tmpfs.
 * [Configurações de package.use e Ambientes](portage/package_use.md) — Flags específicas para pacotes e variáveis para o Chromium.
 
 ### Configuração do Sistema e Ferramentas
