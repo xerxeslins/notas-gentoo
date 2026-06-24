@@ -31,7 +31,7 @@ swapon --show
 ## Swapfile (se quiser)
 
 ```bash
-fallocate -l 14G /swapfile
+fallocate -l 16G /swapfile
 chmod 600 /swapfile
 mkswap /swapfile
 swapon /swapfile
