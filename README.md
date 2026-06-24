@@ -10,7 +10,6 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 
 ### Configuração do Sistema e Ferramentas
 * [Rede e Conectividade](sistema/rede_audio.md) — Migração do backend do NetworkManager para o iwd.
-* [Segurança e Permissões](sistema/seguranca.md) — Configuração do Sudo e visudo.
 * [Gerenciamento de Memória](sistema/performance.md) — Configuração de Zram e Swapfile.
 
 ### Customização, Fontes e Codecs
