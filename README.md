@@ -5,7 +5,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 
 ### Portage e Otimizações de Compilação
 * [make.conf](portage/make.conf.md) — Conteúdo do make.conf.
-* [tmpfs](tmpfs.md) — Configuração de tmpfs.
+* [tmpfs](portage/tmpfs.md) — Configuração de tmpfs.
 * [env para Chromium](portage/env_chromium.md) — Configuração para compilar o Chromium.
 
 ### Configuração do Sistema e Ferramentas
