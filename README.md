@@ -9,9 +9,9 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [env para Chromium](portage/env_chromium.md) — Configuração para compilar o Chromium.
 
 ### Configuração do Sistema e Ferramentas
-* [Rede e Conectividade](sistema/rede_audio.md) — Migração do backend do NetworkManager para o iwd.
-* [Gerenciamento de Memória](sistema/zram.md) — Configuração de Zram.
-* [Criação de Swapfile](sistema/swapfile.md) 
+* [iwd no NetworkManager](sistema/rede_audio.md) — Migração do backend do NetworkManager para o iwd.
+* [Usar Zram](sistema/zram.md) — Configuração de Zram.
+* [Usar Swapfile](sistema/swapfile.md) — Configuração de Swapfile.
 
 ### Customização, Fontes e Codecs
 * [Fontes, Codecs e Compactadores](sistema/customizacao.md) — Fontes Microsoft, compactadores de arquivos, Flatpak e codecs multimídia.
