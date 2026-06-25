@@ -42,3 +42,26 @@ Para listar conteúdo:
 als arquivo.zip
 
 ```
+
+## Suporte gráfico em gerenciadores de arquivos
+
+Se usa KDE Plasma:
+
+```bash
+sudo emerge --ask kde-plasma/ark
+
+```
+
+Se usa GNOME:
+
+```bash
+sudo emerge --ask app-arch/file-roller
+
+```
+
+Se usa XFCE:
+
+```bash
+sudo emerge --ask app-arch/xarchiver
+
+```
