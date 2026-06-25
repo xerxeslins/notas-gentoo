@@ -1,36 +1,20 @@
 ## Trocar backend do NetworkManager pelo iwd
 
 ```bash
-su
-```
-```bash
-echo "net-misc/networkmanager iwd -wext" | tee /etc/portage/package.use/networkmanager
-```
-```bash
-emerge --ask --changed-use net-misc/networkmanager
-```
-```bash
-emerge --ask net-wireless/iwd
-```
-```bash
-cat << 'EOF' > /etc/NetworkManager/conf.d/iwd.conf
+echo "net-misc/networkmanager iwd -wext" | sudo tee /etc/portage/package.use/networkmanager
+sudo emerge --ask --changed-use net-misc/networkmanager
+
+sudo emerge --ask net-wireless/iwd
+
+cat << 'EOF' | sudo tee /etc/NetworkManager/conf.d/iwd.conf
 [device]
 wifi.backend=iwd
 EOF
-```
-```bash
-rc-service wpa_supplicant stop
-```
-```bash
-rc-update del wpa_supplicant default
-```
-```bash
-rc-update add iwd default
-```
-```bash
-rc-service iwd start
-```
-```bash
-rc-service NetworkManager restart
 
+sudo rc-service wpa_supplicant stop
+sudo rc-update del wpa_supplicant default
+
+sudo rc-update add iwd default
+sudo rc-service iwd start
+sudo rc-service NetworkManager restart
 ```
