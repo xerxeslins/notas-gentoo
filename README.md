@@ -10,7 +10,8 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 
 ### Configuração do Sistema e Ferramentas
 * [Rede e Conectividade](sistema/rede_audio.md) — Migração do backend do NetworkManager para o iwd.
-* [Gerenciamento de Memória](sistema/performance.md) — Configuração de Zram e Swapfile.
+* [Gerenciamento de Memória](sistema/zram.md) — Configuração de Zram.
+* [Criação de Swapfile](sistema/swapfile.md) 
 
 ### Customização, Fontes e Codecs
 * [Fontes, Codecs e Compactadores](sistema/customizacao.md) — Fontes Microsoft, compactadores de arquivos, Flatpak e codecs multimídia.
