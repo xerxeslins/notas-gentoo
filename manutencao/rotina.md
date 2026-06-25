@@ -1,6 +1,6 @@
 ## Manutenção
 
-1. Sincronizar os repositórios (opcional):
+1. Sincronizar os repositórios:
 
 ```bash
 sudo emaint sync -a
