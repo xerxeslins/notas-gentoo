@@ -27,3 +27,4 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 
 ### Manutenção e Limpeza
 * [Rotina de Atualização](manutencao/rotina.md) — Comandos para manter o sistema limpo e atualizado.
+* [Remoção segura de pacotes](manutencao/remover_pacotes.md) — Como remover pacotes de forma segura. 
