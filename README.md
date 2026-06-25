@@ -14,6 +14,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Usar Zram](sistema/zram.md) — Configuração de Zram.
 * [Usar Swapfile](sistema/swapfile.md) — Configuração de Swapfile.
 * [Flatpak](sistema/flatpak.md) — Configurar flatpak.
+* [Eix](sistema/eix.md) — Como usar o Eix.
 
 ### Customização, Fontes e Codecs
 * [Fontes](sistema/fontes.md) — Fontes Microsoft e outras.
