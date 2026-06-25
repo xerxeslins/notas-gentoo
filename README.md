@@ -15,6 +15,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 
 ### Customização, Fontes e Codecs
 * [Fontes, Codecs e Compactadores](sistema/customizacao.md) — Fontes Microsoft, compactadores de arquivos, Flatpak e codecs multimídia.
+* [Fontes](sistema/fontes.md) — Fontes Microsoft e outras.
 
 ### Manutenção e Limpeza
 * [Rotina de Atualização](manutencao/rotina.md) — Comandos para manter o sistema limpo e atualizado.
