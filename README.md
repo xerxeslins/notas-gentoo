@@ -15,6 +15,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Usar Swapfile](sistema/swapfile.md) — Configuração de Swapfile.
 * [Flatpak](sistema/flatpak.md) — Configurar flatpak.
 * [Eix](sistema/eix.md) — Como usar o Eix.
+* [equery e flaggie](sistema/equery_flaggie.md) — Como usar o equery e flaggie.
 
 ### Customização, Fontes e Codecs
 * [Fontes](sistema/fontes.md) — Fontes Microsoft e outras.
