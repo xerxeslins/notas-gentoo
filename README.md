@@ -5,6 +5,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 
 ### Portage e Otimizações de Compilação
 * [make.conf](portage/make.conf.md) — Conteúdo do make.conf.
+* [Portage com Git](portage/git.md) — Como sincronizar o repositório do Gentoo com Git.
 * [tmpfs](portage/tmpfs.md) — Configuração de tmpfs.
 * [env para Chromium](portage/env_chromium.md) — Configuração para compilar o Chromium.
 
