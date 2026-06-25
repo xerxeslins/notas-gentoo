@@ -13,6 +13,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [iwd no NetworkManager](sistema/rede_audio.md) — Migração do backend do NetworkManager para o iwd.
 * [Usar Zram](sistema/zram.md) — Configuração de Zram.
 * [Usar Swapfile](sistema/swapfile.md) — Configuração de Swapfile.
+* [Flatpak](sistema/flatpak.md) — Configurar flatpak.
 
 ### Customização, Fontes e Codecs
 * [Fontes](sistema/fontes.md) — Fontes Microsoft e outras.
