@@ -20,5 +20,8 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Codecs](sistema/codecs.md) — Instalação de codecs.
 * [Compactadores](sistema/compactadores.md) — Ferramentas de compactação.
 
+### Resolução de problemas
+* [Spectacle não grava vídeo](problemas/spectacle.md) — Como resolver o problema do Spectacle que não grava vídeo.
+
 ### Manutenção e Limpeza
 * [Rotina de Atualização](manutencao/rotina.md) — Comandos para manter o sistema limpo e atualizado.
