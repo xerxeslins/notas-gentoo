@@ -14,9 +14,9 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Usar Swapfile](sistema/swapfile.md) — Configuração de Swapfile.
 
 ### Customização, Fontes e Codecs
-* [Fontes, Codecs e Compactadores](sistema/customizacao.md) — Fontes Microsoft, compactadores de arquivos, Flatpak e codecs multimídia.
 * [Fontes](sistema/fontes.md) — Fontes Microsoft e outras.
 * [Codecs](sistema/codecs.md) — Instalação de codecs.
+* [Compactadores](sistema/compactadores.md) — Ferramentas de compactação.
 
 ### Manutenção e Limpeza
 * [Rotina de Atualização](manutencao/rotina.md) — Comandos para manter o sistema limpo e atualizado.
