@@ -48,7 +48,7 @@ als arquivo.zip
 Se usa KDE Plasma:
 
 ```bash
-sudo emerge --ask kde-plasma/ark
+sudo emerge --ask kde-apps/ark
 
 ```
 
