@@ -8,7 +8,6 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Portage com Git](portage/git.md) — Como sincronizar o repositório do Gentoo com Git.
 * [tmpfs](portage/tmpfs.md) — Configuração de tmpfs.
 * [env para Chromium com jobs reduzidos](portage/env_chromium.md) — Configuração para compilar o Chromium com menos jobs.
-* [Compilar pacotes com LLVM/Clang](portage/llvm_clang.md) — Conceitos básicos, configuração e ativação por pacote.
 
 ### Configuração do Sistema e Ferramentas
 * [iwd no NetworkManager](sistema/rede_audio.md) — Migração do backend do NetworkManager para o iwd.
