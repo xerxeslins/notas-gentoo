@@ -6,12 +6,12 @@ sudo mkdir -p /etc/portage/env
 
 ```
 
-Limita os jobs a 8, por exemplo, para o Chromium:
+Limita os jobs a 2, por exemplo, para o Chromium:
 
 ```bash
 cat << 'EOF' | sudo tee /etc/portage/env/low-ram.conf > /dev/null
-MAKEOPTS="-j8"
-NINJAOPTS="-j8"
+MAKEOPTS="-j2"
+NINJAOPTS="-j2"
 EOF
 
 sudo mkdir -p /etc/portage/package.env
