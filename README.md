@@ -27,6 +27,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 
 ### Resolução de problemas
 * [Spectacle não grava vídeo](problemas/spectacle.md) — Como resolver o problema do Spectacle que não grava vídeo.
+* [Correção de instabilidade no iwd (Realtek RTW88)](problemas/instabilidade_iwd.md) — Solução para sumiço de redes e microquedas (OpenRC).
 
 ### Manutenção e Limpeza
 * [Rotina de Atualização](manutencao/rotina.md) — Comandos para manter o sistema limpo e atualizado.
