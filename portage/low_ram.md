@@ -1,20 +1,16 @@
 
 ## Env para programas pesados tendo pouca RAM
 
-```bash
-sudo mkdir -p /etc/portage/env
-
-```
-
 Limita os jobs a 2, por exemplo, para o Chromium:
 
 ```bash
+sudo mkdir -p /etc/portage/env /etc/portage/package.env
+
 cat << 'EOF' | sudo tee /etc/portage/env/low-ram.conf > /dev/null
 MAKEOPTS="-j2"
 NINJAOPTS="-j2"
 EOF
 
-sudo mkdir -p /etc/portage/package.env
 echo "www-client/chromium low-ram.conf" | sudo tee -a /etc/portage/package.env/jobs > /dev/null
 
 ```
