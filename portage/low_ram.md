@@ -14,6 +14,7 @@ MAKEOPTS="-j8"
 NINJAOPTS="-j8"
 EOF
 
+sudo mkdir -p /etc/portage/package.env
 echo "www-client/chromium low-ram.conf" | sudo tee -a /etc/portage/package.env/jobs > /dev/null
 
 ```
