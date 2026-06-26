@@ -52,7 +52,7 @@ sudo rc-service NetworkManager start
 Verifique o status do *Power Save* e qualidade do link (substitua `wlan1` pela sua interface):
 
 ```bash
-echo -e "--- POWER SAVE ---\n$(iw dev wlan1 get power_save)\n\n--- LINK QUALITY ---\n$(iw dev wlan1 link | grep -E 'signal|bitrate|freq')"
+echo -e "--- POWER SAVE ---\n$(iw dev wlan1 get power_save)\n\n--- LINK QUALITY ---\n$(iw dev wlan0 link | grep -E 'signal|bitrate|freq')"
 
 ```
 
