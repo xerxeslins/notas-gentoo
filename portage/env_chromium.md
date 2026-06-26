@@ -17,3 +17,5 @@ EOF
 echo "www-client/chromium chromium" | sudo tee -a /etc/portage/package.env
 
 ```
+
+Apesar disso, não foi necessário usar essa configuração para compilar o Chromium tendo 32GB de RAM, 26GB reservado para TMPFS e 16GB de swap, no AMD Ryzen 7 3700X. Levou cerca de 7h e 30min.
