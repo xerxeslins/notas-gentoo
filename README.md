@@ -18,7 +18,6 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Script para encriptar a home com ext4](sistema/fscrypt.md) — Script de encriptação.
 * [Eix](sistema/eix.md) — Como usar o Eix.
 * [equery e flaggie](sistema/equery_flaggie.md) — Como usar o equery e flaggie.
-* [Desmascarar](sistema/unmask.md) — Como desmascarar um pacote.
 
 ### Customização, Fontes e Codecs
 * [Fontes](sistema/fontes.md) — Fontes Microsoft e outras.
@@ -31,4 +30,5 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 
 ### Manutenção e Limpeza
 * [Rotina de Atualização](manutencao/rotina.md) — Comandos para manter o sistema limpo e atualizado.
-* [Remoção segura de pacotes](manutencao/remover_pacotes.md) — Como remover pacotes de forma segura. 
+* [Remoção segura de pacotes](manutencao/remover_pacotes.md) — Como remover pacotes de forma segura.
+* [Desmascarar](sistema/unmask.md) — Como desmascarar um pacote.
