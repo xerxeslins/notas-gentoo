@@ -14,6 +14,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Usar Zram](sistema/zram.md) — Configuração de Zram.
 * [Usar Swapfile](sistema/swapfile.md) — Configuração de Swapfile.
 * [Flatpak](sistema/flatpak.md) — Configurar flatpak.
+* [Script para encriptar a home com ext4](sistema/fscrypt) — Script de encriptação.
 * [Eix](sistema/eix.md) — Como usar o Eix.
 * [equery e flaggie](sistema/equery_flaggie.md) — Como usar o equery e flaggie.
 
