@@ -1,5 +1,5 @@
 
-## Env para o Chromium
+## Env para programas pesados tendo pouca RAM
 
 ```bash
 sudo mkdir -p /etc/portage/env
