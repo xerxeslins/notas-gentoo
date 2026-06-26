@@ -34,7 +34,7 @@ echo "ATENÇÃO: Etapa crítica. Ctrl+C desativado temporariamente. NÃO feche o
 trap '' SIGINT
 
 if fscrypt encrypt "/home/$ALVO_USER" --user="$ALVO_USER"; then
-  echo "Copiando arquivos de volta. Este processo é demorado. Aguarde..."
+  echo "Copiando arquivos de volta. Aguarde..."
   cp -a "/home/${ALVO_USER}-backup/." "/home/$ALVO_USER/"
   rm -fr "/home/${ALVO_USER}-backup"
 
