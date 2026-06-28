@@ -11,11 +11,11 @@ sudo grep -iE "roaming|disconnect|failed" /var/log/messages
 
 **Solução:** Fixar o BSSID na conexão ativa e desativar a randomização de MAC e scans de fundo.
 
-Identifique a conexão ativa e fixe o BSSID (substitua o MAC `74:6f:88:f5:95:20` pelo endereço correto do rádio desejado, identificado no log):
+Identifique a conexão ativa e fixe o BSSID (substitua o MAC `74:6f:88:f5:95:1f` pelo endereço correto do rádio desejado, identificado no log):
 
 ```bash
 WIFI_CON=$(nmcli -t -f NAME,TYPE connection show --active | grep 802-11-wireless | cut -d: -f1)
-sudo nmcli connection modify "$WIFI_CON" 802-11-wireless.bssid 74:6f:88:f5:95:20
+sudo nmcli connection modify "$WIFI_CON" 802-11-wireless.bssid 74:6f:88:f5:95:1f
 
 ```
 
