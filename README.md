@@ -15,12 +15,14 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Usar Swapfile](sistema/swapfile.md) — Configuração de Swapfile.
 * [Flatpak](sistema/flatpak.md) — Configurar flatpak.
 * [Steam (Flatpak) + NTFS](sistema/steam_ntfs.md) — Configurar Steam (Flatpak) com jogos em partição NTFS.
-* [Script para encriptar a home com ext4](sistema/fscrypt.md) — Script de encriptação.
 * [Eix](sistema/eix.md) — Como usar o Eix.
 * [equery e flaggie](sistema/equery_flaggie.md) — Como usar o equery e flaggie.
 * [Atualizar kernel-bin](sistema/kernel_bin_update.md) — Atualizando para a última versão do gentoo-kernel-bin no Gentoo Estável.
 * [genlop - tempo e histórico de compilação](sistema/genlop.md) — Ferramenta para saber quanto tempo levou para compilar um pacote.
+
+### Scripts, aliases e funções
 * [Aliases e funções](sistema/aliases.md) — Alguns aliases e funções para inserir no ~/.bashrc.
+* [Script para encriptar a home com ext4](sistema/fscrypt.md) — Script de encriptação.
 
 ### Customização, Fontes e Codecs
 * [Fontes](sistema/fontes.md) — Fontes Microsoft e outras.
