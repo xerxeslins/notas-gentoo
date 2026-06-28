@@ -24,7 +24,8 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Aliases e funções](scripts/aliases.md) — Alguns aliases e funções para inserir no ~/.bashrc.
 * [Encriptar a home com ext4](scripts/fscrypt.md) — Script de encriptação da home em ext4.
 * [Gerenciar Flatpaks](scripts/flatpak_manager.md) — Script de gerenciamento dos pacotes flatpaks instalados.
-* [Plugin Warsaw](scripts/warsaw_manager.md) — Script que instala/remove o plugin warsaw para acesso aos bancos. 
+* [Plugin Warsaw](scripts/warsaw_manager.md) — Script que instala/remove o plugin warsaw para acesso aos bancos.
+* [Adicionar impressoras](scripts/printer_manager.md) — Script que instala impressoras de rede automaticamente ou inserindo o IP.
 
 ### Customização, Fontes e Codecs
 * [Fontes](sistema/fontes.md) — Fontes Microsoft e outras.
