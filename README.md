@@ -23,6 +23,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 ### Scripts, aliases e funções
 * [Aliases e funções](scripts/aliases.md) — Alguns aliases e funções para inserir no ~/.bashrc.
 * [Encriptar a home com ext4](scripts/fscrypt.md) — Script de encriptação da home em ext4.
+* [Gerenciar Flatpaks](scripts/flatpak_manager.md) — Script de gerenciamento dos pacotes flatpaks instalados.
 
 ### Customização, Fontes e Codecs
 * [Fontes](sistema/fontes.md) — Fontes Microsoft e outras.
