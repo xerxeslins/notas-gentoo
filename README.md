@@ -20,7 +20,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [equery e flaggie](sistema/equery_flaggie.md) — Como usar o equery e flaggie.
 * [Atualizar kernel-bin](sistema/kernel_bin_update.md) — Atualizando para a última versão do gentoo-kernel-bin no Gentoo Estável.
 * [genlop - tempo e histórico de compilação](sistema/genlop.md) — Ferramenta para saber quanto tempo levou para compilar um pacote.
-* [Alias e funções](sistema/alias.md) — Alguns alias e funções para inserir no ~/.bashrc.
+* [Aliases e funções](sistema/alias.md) — Alguns aliases e funções para inserir no ~/.bashrc.
 
 ### Customização, Fontes e Codecs
 * [Fontes](sistema/fontes.md) — Fontes Microsoft e outras.
