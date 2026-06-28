@@ -1,64 +1,36 @@
-## Correção de instabilidade no iwd (Realtek RTW88)
+## Diagnóstico e solução para Band Steering (Wi-Fi)
 
-Solução para sumiço de redes e microquedas (OpenRC). Limita funções automatizadas do daemon (gerenciamento de energia agressivo e *roaming*) que derrubam o driver `rtw88`.
-
-### 1. Configuração do iwd (Anti-roaming e Protocolos)
-
-```bash
-sudo mkdir -p /etc/iwd
-cat << 'EOF' | sudo tee /etc/iwd/main.conf
-[General]
-EnableNetworkConfiguration=false
-RoamThreshold=-85
-RoamThreshold5G=-80
-RoamRetryInterval=0
-BSSBlacklistThreshold=5
-
-[Network]
-EnableIPv6=false
-
-[Scan]
-DisableHE=true
-DisableVHT=true
-EOF
-
-```
-
-### 2. Persistência do Power Save (udev)
-
-Garante que o *Power Save* permaneça em `off` independentemente de mudanças no nome da interface.
-
-```bash
-echo 'ACTION=="add", SUBSYSTEM=="net", KERNEL=="wlan*", RUN+="/usr/sbin/iw dev %k set power_save off"' | sudo tee /etc/udev/rules.d/70-wifi-powertweak.rules
-
-```
-
-### 3. Ajuste no NetworkManager
-
-Nas configurações de rede da interface gráfica (KDE/GNOME), edite a conexão atual e altere o método **IPv6** para **Ignorado**.
-
-### 4. Aplicando as configurações (OpenRC)
-
-```bash
-sudo rc-service NetworkManager stop
-sudo rc-service iwd restart
-sleep 5
-sudo rc-service NetworkManager start
-
-```
-
-### 5. Comandos de diagnóstico
-
-Verifique o status do *Power Save* e qualidade do link (substitua `wlan1` pela sua interface):
-
-```bash
-echo -e "--- POWER SAVE ---\n$(iw dev wlan1 get power_save)\n\n--- LINK QUALITY ---\n$(iw dev wlan0 link | grep -E 'signal|bitrate|freq')"
-
-```
-
-Para confirmar se a conexão estabilizou (buscando erros no log do sistema):
+Para investigar instabilidades e microquedas, busque erros de desconexão ou *roaming* no log do sistema:
 
 ```bash
 sudo grep -iE "roaming|disconnect|failed" /var/log/messages
 
 ```
+
+**Exemplo de problema (Band Steering):** O log indica saltos constantes entre diferentes BSSIDs (ex: finais `1f` e `20`). Isso ocorre quando o roteador unifica as redes 2.4GHz e 5GHz sob o mesmo SSID, forçando o adaptador a trocar de rádio repetidamente.
+
+**Solução:** Fixar o BSSID na conexão ativa e desativar a randomização de MAC e scans de fundo.
+
+Identifique a conexão ativa e fixe o BSSID (substitua o MAC `74:6f:88:f5:95:20` pelo endereço correto do rádio desejado, identificado no log):
+
+```bash
+WIFI_CON=$(nmcli -t -f NAME,TYPE connection show --active | grep 802-11-wireless | cut -d: -f1)
+sudo nmcli connection modify "$WIFI_CON" 802-11-wireless.bssid 74:6f:88:f5:95:20
+
+```
+
+Desative a randomização de MAC criando a regra no NetworkManager:
+
+```bash
+sudo mkdir -p /etc/NetworkManager/conf.d
+echo -e "[device]\nwifi.scan-rand-mac-address=no\n\n[connection]\nwifi.cloned-mac-address=permanent" | sudo tee /etc/NetworkManager/conf.d/disable-wifi-roaming.conf
+
+```
+
+Reinicie o serviço de rede (OpenRC):
+
+```bash
+sudo rc-service NetworkManager restart
+
+```
+
