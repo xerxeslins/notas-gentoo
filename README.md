@@ -21,7 +21,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [genlop - tempo e histórico de compilação](sistema/genlop.md) — Ferramenta para saber quanto tempo levou para compilar um pacote.
 
 ### Scripts, aliases e funções
-* [Aliases e funções](sistema/aliases.md) — Alguns aliases e funções para inserir no ~/.bashrc.
+* [Aliases e funções](scripts/aliases.md) — Alguns aliases e funções para inserir no ~/.bashrc.
 * [Encriptar a home com ext4](sistema/fscrypt.md) — Script de encriptação da home em ext4.
 
 ### Customização, Fontes e Codecs
