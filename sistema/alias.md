@@ -21,6 +21,21 @@ check_distfiles_space() {
 check_distfiles_space
 
 # --- INICIO MEUS ALIASES ---
+# Lista os comandos personalizados disponíveis
+comandos() {
+    echo -e "\e[1;36m=== Comandos Personalizados Disponíveis ===\e[0m"
+    echo -e "\e[1;32mup\e[0m          : Sincroniza e atualiza o sistema (@world)."
+    echo -e "\e[1;32mlimpar\e[0m      : Executa o depclean."
+    echo -e "\e[1;32mll\e[0m          : Lista arquivos detalhadamente (ls -lah)."
+    echo -e "\e[1;32mportas\e[0m      : Lista portas abertas (ss)."
+    echo -e "\e[1;32mcatlimpo\e[0m    : Mostra arquivo ignorando comentários e linhas vazias."
+    echo -e "\e[1;32mextrair\e[0m     : Extrator universal para diversos formatos."
+    echo -e "\e[1;32mv2mp4\e[0m       : Converte vídeo para MP4 via ffmpeg."
+    echo -e "\e[1;32mmp4togif\e[0m    : Converte MP4 para GIF (tamanhos p, m, g)."
+    echo -e "\e[1;32mimgjoin\e[0m     : Junta imagens horizontal (h) ou vertical (v)."
+    echo -e "\e[1;32mimgresize\e[0m   : Redimensiona imagem por porcentagem."
+    echo -e "\e[1;32mpdfnoimg\e[0m    : Remove imagens de um PDF via ghostscript."
+}
 
 alias up='sudo emerge --sync && sudo emerge -avuDN @world'
 alias limpar='sudo emerge --depclean'
