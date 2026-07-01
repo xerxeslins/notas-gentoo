@@ -79,7 +79,7 @@ if [ -f "/usr/local/bin/warsaw/core" ]; then
     fi
 fi
 
-URL="[https://cloud.gastecnologia.com.br/bb/downloads/ws/debian/warsaw_setup64.run](https://cloud.gastecnologia.com.br/bb/downloads/ws/debian/warsaw_setup64.run)"
+URL="https://cloud.gastecnologia.com.br/bb/downloads/ws/debian/warsaw_setup64.run"
 TMPDIR=$(mktemp -d)
 cd "$TMPDIR"
 
@@ -142,7 +142,7 @@ if ss -tlpn | grep -q ":30900"; then
     echo -e "${C_YELLOW}========================================================================${C_NONE}"
     echo -e "${C_YELLOW}[AVISO] SE O WARSAW FALHAR NO NAVEGADOR MESMO ESTANDO ATIVO, SIGA OS PASSOS:${C_NONE}"
     echo -e "  1. Abra uma nova aba no navegador e acesse diretamente:"
-    echo -e "     ${C_BLUE}[https://127.0.0.1:30900](https://127.0.0.1:30900)${C_NONE}"
+    echo -e "     ${C_BLUE}https://127.0.0.1:30900${C_NONE}"
     echo -e "  2. O navegador exibira um alerta de seguranca ('A conexao nao e privada')."
     echo -e "  3. Clique em Avancado e selecione 'Aceitar o risco e continuar'."
     echo -e "  4. Uma pagina em branco ou erro 404 aparecera. Isso e o esperado."
