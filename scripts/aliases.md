@@ -121,6 +121,24 @@ pdfnoimg() {
     fi
 }
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+# --- FIM MEUS ALIASES ---
+# Check distfiles size on login
+check_distfiles_space() {
+    local DISTDIR="/var/cache/distfiles"
+    local LIMIT_GB=10
+    
+    if [ -d "$DISTDIR" ]; then
+        local size_kb=$(du -sk "$DISTDIR" | cut -f1)
+        local limit_kb=$((LIMIT_GB * 1048576))
+        
+        if [ "$size_kb" -gt "$limit_kb" ]; then
+            local size_gb=$(awk "BEGIN {printf \"%.2f\", $size_kb/1048576}")
+            echo -e "\e[1;33m[Aviso]\e[0m distfiles ocupando ${size_gb}GB totais (Ativos + Obsoletos)."
+            echo -e "Use \e[1;32msudo eclean-dist --deep\e[0m para limpar ou aumente o limite de ${LIMIT_GB}GB no ~/.bashrc."
+        fi
+    fi
+}
+check_distfiles_space
 
 # --- FIM MEUS ALIASES ---
 ```
