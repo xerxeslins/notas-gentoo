@@ -122,6 +122,7 @@ pdfnoimg() {
 }
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 # --- FIM MEUS ALIASES ---
+
 # Check distfiles size on login
 check_distfiles_space() {
     local DISTDIR="/var/cache/distfiles"
@@ -139,6 +140,4 @@ check_distfiles_space() {
     fi
 }
 check_distfiles_space
-
-# --- FIM MEUS ALIASES ---
 ```
