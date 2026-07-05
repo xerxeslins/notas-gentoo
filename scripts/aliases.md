@@ -18,9 +18,11 @@ comandos() {
     echo -e "\e[1;32mimgjoin\e[0m     : Junta imagens horizontal (h) ou vertical (v)."
     echo -e "\e[1;32mimgresize\e[0m   : Redimensiona imagem por porcentagem."
     echo -e "\e[1;32mpdfnoimg\e[0m    : Remove imagens de um PDF via ghostscript."
+    echo -e "\e[1;32mupdate-grub\e[0m : Atualiza a configuração do GRUB."
 }
 
-alias up='sudo emerge --sync && sudo emerge -avuDN @world'
+alias up='sudo eix-sync && sudo emerge -vaquDN @world'
+#alias up='sudo emerge --sync && sudo emerge -avuDN @world'
 alias limpar='sudo emerge --depclean'
 alias ll='ls -lah --color=auto'
 alias grep='grep --color=auto'
@@ -118,24 +120,7 @@ pdfnoimg() {
         echo "Uso: pdfnoimg <arquivo.pdf>"
     fi
 }
-# --- FIM MEUS ALIASES ---
-# Check distfiles size on login
-check_distfiles_space() {
-    local DISTDIR="/var/cache/distfiles"
-    local LIMIT_GB=5
-    
-    if [ -d "$DISTDIR" ]; then
-        local size_kb=$(du -sk "$DISTDIR" | cut -f1)
-        local limit_kb=$((LIMIT_GB * 1048576))
-        
-        if [ "$size_kb" -gt "$limit_kb" ]; then
-            local size_gb=$(awk "BEGIN {printf \"%.2f\", $size_kb/1048576}")
-            echo -e "\e[1;33m[Aviso]\e[0m distfiles ocupando ${size_gb}GB totais (Ativos + Obsoletos)."
-            echo -e "Use \e[1;32msudo eclean-dist --deep\e[0m para limpar ou aumente o limite de ${LIMIT_GB}GB no ~/.bashrc."
-        fi
-    fi
-}
-check_distfiles_space
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 # --- FIM MEUS ALIASES ---
 ```
