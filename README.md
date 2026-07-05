@@ -15,7 +15,6 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Usar Swapfile](sistema/swapfile.md) — Configuração de Swapfile.
 * [CPU Governor](sistema/governor.md) — Configurar CPU Governor para Performance Permanente (OpenRC)
 * [Flatpak](sistema/flatpak.md) — Configurar flatpak.
-* [Steam (Flatpak) + NTFS](sistema/steam_ntfs.md) — Configurar Steam (Flatpak) com jogos em partição NTFS.
 * [Eix](sistema/eix.md) — Como usar o Eix.
 * [equery e flaggie](sistema/equery_flaggie.md) — Como usar o equery e flaggie.
 * [Atualizar kernel-bin](sistema/kernel_bin_update.md) — Atualizando para a última versão do gentoo-kernel-bin no Gentoo Estável.
@@ -43,3 +42,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Remoção segura de pacotes](manutencao/remover_pacotes.md) — Como remover pacotes de forma segura.
 * [Desmascarar](manutencao/unmask.md) — Como desmascarar um pacote.
 * [Limpeza de distfiles](manutencao/distfiles.md) — Limpeza de arquivos de código-fonte.
+
+### Jogos
+* [DOOMRETRO](jogos/doomretro.md) — Instalação do DOOMRETRO.
+* [Steam (Flatpak) + NTFS](jogos/steam_ntfs.md) — Configurar Steam (Flatpak) com jogos em partição NTFS.
