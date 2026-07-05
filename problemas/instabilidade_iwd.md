@@ -1,36 +1,31 @@
 ## Diagnóstico e solução para Band Steering (Wi-Fi)
 
-Para investigar instabilidades e microquedas, busque erros de desconexão ou *roaming* no log do sistema:
+Para investigar instabilidades e microquedas, busque erros de desconexão ou roaming no log do sistema:
+`sudo grep -iE "roaming|disconnect|failed" /var/log/messages`
 
-```bash
-sudo grep -iE "roaming|disconnect|failed" /var/log/messages
+Exemplo de problema (Band Steering / Roaming Agressivo): O log indica saltos constantes entre diferentes BSSIDs. Isso ocorre quando o roteador unifica as redes 2.4GHz e 5GHz sob o mesmo SSID ou há pontos de acesso sobrepostos, forçando o adaptador a trocar de rádio a qualquer variação mínima de sinal.
 
-```
+Solução: Configurar o parâmetro `bgscan` globalmente para definir um limiar de sinal (ex: -70 dBm) que justifique o roaming, e desativar a randomização de MAC. Isso mantém a capacidade de transição física sem causar quedas por oscilações triviais.
 
-**Exemplo de problema (Band Steering):** O log indica saltos constantes entre diferentes BSSIDs (ex: finais `1f` e `20`). Isso ocorre quando o roteador unifica as redes 2.4GHz e 5GHz sob o mesmo SSID, forçando o adaptador a trocar de rádio repetidamente.
-
-**Solução:** Fixar o BSSID na conexão ativa e desativar a randomização de MAC e scans de fundo.
-
-Identifique a conexão ativa e fixe o BSSID (substitua o MAC `74:6f:88:f5:95:1f` pelo endereço correto do rádio desejado, identificado no log):
-
-```bash
-WIFI_CON=$(nmcli -t -f NAME,TYPE connection show --active | grep 802-11-wireless | cut -d: -f1)
-sudo nmcli connection modify "$WIFI_CON" 802-11-wireless.bssid 74:6f:88:f5:95:1f
-
-```
-
-Desative a randomização de MAC criando a regra no NetworkManager:
+Crie o arquivo de configuração no NetworkManager:
 
 ```bash
 sudo mkdir -p /etc/NetworkManager/conf.d
-echo -e "[device]\nwifi.scan-rand-mac-address=no\n\n[connection]\nwifi.cloned-mac-address=permanent" | sudo tee /etc/NetworkManager/conf.d/disable-wifi-roaming.conf
+
+sudo bash -c "cat << 'EOF' > /etc/NetworkManager/conf.d/wifi-stability.conf
+[connection]
+wifi.bgscan=simple:30:-70:300
+wifi.cloned-mac-address=permanent
+
+[device]
+wifi.scan-rand-mac-address=no
+EOF"
 
 ```
 
-Reinicie o serviço de rede (OpenRC):
+Reinicie o serviço (OpenRC):
 
 ```bash
 sudo rc-service NetworkManager restart
 
 ```
-
