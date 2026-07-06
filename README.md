@@ -36,6 +36,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 ### Resolução de problemas
 * [Spectacle não grava vídeo](problemas/spectacle.md) — Como resolver o problema do Spectacle que não grava vídeo.
 * [Correção de instabilidade na Wi-Fi](problemas/instabilidade_NetworkManager.md) — Solução para sumiço de redes e microquedas (OpenRC).
+* [Verificar frequência Wi-Fi](problemas/verificar_frequencia.md) — Comando nmcli para checar operação em 2.4 GHz ou 5 GHz.
 
 ### Manutenção e Limpeza
 * [Rotina de Atualização](manutencao/rotina.md) — Comandos para manter o sistema limpo e atualizado.
