@@ -37,6 +37,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Spectacle não grava vídeo](problemas/spectacle.md) — Como resolver o problema do Spectacle que não grava vídeo.
 * [Correção de instabilidade na Wi-Fi](problemas/instabilidade_NetworkManager.md) — Solução para sumiço de redes e microquedas (OpenRC).
 * [Verificar frequência Wi-Fi](problemas/verificar_frequencia.md) — Comando nmcli para checar operação em 2.4 GHz ou 5 GHz.
+* [Organizando o arquivo world](problemas/organizar_world.md) — Organizando o arquivo world do Gentoo em Ordem Alfabética.
 
 ### Manutenção e Limpeza
 * [Rotina de Atualização](manutencao/rotina.md) — Comandos para manter o sistema limpo e atualizado.
