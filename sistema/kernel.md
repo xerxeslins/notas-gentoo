@@ -1,19 +1,21 @@
-## Compilação do gentoo-kernel com savedconfig (Nome e CPU)
+## Compilação do gentoo-kernel (Otimização e Prevenção de Erros)
 
-Otimize o `sys-kernel/gentoo-kernel` para a arquitetura nativa e altere o nome da *release*, mantendo a automação do `dist-kernel` (initramfs e GRUB).
+Procedimento para compilar `sys-kernel/gentoo-kernel` otimizado para CPU nativa, com nome personalizado e correção de erro de compilação BTF (comum no `amdgpu`), mantendo a automação do `dist-kernel` (initramfs e GRUB).
 
 ### 1. Habilitar versão instável e USE flag (savedconfig)
 
 ```bash
 sudo mkdir -p /etc/portage/package.accept_keywords /etc/portage/package.use
-echo "sys-kernel/gentoo-kernel ~amd64" | sudo tee -a /etc/portage/package.accept_keywords/kernel
-echo "sys-kernel/gentoo-kernel savedconfig" | sudo tee -a /etc/portage/package.use/kernel
+
+echo "sys-kernel/gentoo-kernel ~amd64" | sudo tee /etc/portage/package.accept_keywords/kernel
+
+cat << 'EOF' | sudo tee /etc/portage/package.use/kernel
+sys-kernel/gentoo-kernel savedconfig
+EOF
 
 ```
 
 ### 2. Preparar código-fonte
-
-Baixe e extraia os fontes sem compilar, acessando o diretório de trabalho temporário:
 
 ```bash
 sudo ebuild $(equery w sys-kernel/gentoo-kernel) prepare
@@ -28,26 +30,30 @@ sudo make menuconfig
 
 ```
 
-Faça as seguintes alterações:
+Realize estritamente as três alterações abaixo:
 
-* **Nome:** Acesse `General setup` ---> `Local version - append to kernel release` e defina um sufixo (ex: `-custom`).
-* **Otimização CPU:** Acesse `Processor type and features` ---> Marque `[*] Build and optimize for local/native CPU`.
+* **Nome customizado:** Vá em `General setup` ---> `Local version - append to kernel release` e insira um sufixo (ex: `-custom`).
+* **Otimização de CPU:** Vá em `Processor type and features` ---> Marque `[*] Build and optimize for local/native CPU`.
+* **Desabilitar BTF (Prevenção de erro em módulos grandes):** Vá em `Kernel hacking` ---> `Compile-time checks and compiler options` ---> Desmarque `[ ] Generate BTF typeinfo`.
 * Salve e saia.
 
-### 4. Exportar configuração e compilar
-
-Mova o `.config` para o diretório oficial do `savedconfig` e inicie a instalação:
+### 4. Exportar configuração
 
 ```bash
 sudo mkdir -p /etc/portage/savedconfig/sys-kernel
 sudo cp .config /etc/portage/savedconfig/sys-kernel/gentoo-kernel
+
+```
+
+### 5. Compilação e Instalação
+
+```bash
+cd /
 sudo emerge --ask --verbose sys-kernel/gentoo-kernel
 
 ```
 
-### 5. Configurar link simbólico
-
-Atualize o link do sistema para o novo código-fonte:
+### 6. Configurar link simbólico
 
 ```bash
 sudo eselect kernel list
