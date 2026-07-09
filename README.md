@@ -10,6 +10,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [env low_ram](portage/low_ram.md) — Configuração para compilar com pouca RAM.
 
 ### Configuração do Sistema e Ferramentas
+* [compilação do gentoo-kernel](sistema/kernel.md) — Passos para compilar o kernel do Gentoo.
 * [iwd no NetworkManager](sistema/rede_audio.md) — Migração do backend do NetworkManager para o iwd.
 * [Usar Zram](sistema/zram.md) — Configuração de Zram.
 * [Usar Swapfile](sistema/swapfile.md) — Configuração de Swapfile.
