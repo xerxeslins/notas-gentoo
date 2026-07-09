@@ -1,5 +1,12 @@
 ## Compilação do gentoo-kernel (Otimização e Prevenção de Erros)
 
+**Obs.:** se estiver usando `TMPFS`, talvez seja o caso de desativá-lo temporariamente para não sofrer com falta de memória.
+
+```bash
+umount /var/tmp/portage
+rm -rf /var/tmp/portage/*
+```
+
 Procedimento para compilar `sys-kernel/gentoo-kernel` otimizado para CPU nativa, com nome personalizado e correção de erro de compilação BTF (comum no `amdgpu`), mantendo a automação do `dist-kernel` (initramfs e GRUB).
 
 ### 1. Habilitar versão instável e USE flag (savedconfig)
