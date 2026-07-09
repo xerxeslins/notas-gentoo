@@ -48,6 +48,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Remoção segura de pacotes](manutencao/remover_pacotes.md) — Como remover pacotes de forma segura.
 * [Desmascarar](manutencao/unmask.md) — Como desmascarar um pacote.
 * [Limpeza de distfiles](manutencao/distfiles.md) — Limpeza de arquivos de código-fonte.
+* [Limeza automatizada de distfiles](manutencao/xerxes_postmerge_distclean.md) — Limpeza de arquivos de código-fonte de forma automática.
 
 ### Jogos
 * [DOOMRETRO](jogos/doomretro.md) — Instalação do DOOMRETRO.
