@@ -3,6 +3,9 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 
 ## Índice de Navegação
 
+### Instalação
+* [Instalação do Gentoo (amd64, OpenRC, KDE Plasma, UEFI, Ext4)](instalacao/basica.md) — Passos da instalação básica.
+
 ### Portage e Otimizações de Compilação
 * [make.conf](portage/make.conf.md) — Conteúdo do make.conf.
 * [Portage com Git](portage/git.md) — Como sincronizar o repositório do Gentoo com Git.
