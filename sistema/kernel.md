@@ -1,6 +1,6 @@
 ## Compilação do gentoo-kernel (Otimização e Prevenção de Erros)
 
-**Obs.:** se estiver usando `TMPFS`, talvez seja o caso de desativá-lo temporariamente para não sofrer com falta de memória.
+**Obs.:** se estiver usando `TMPFS`, talvez seja o caso de desativá-la temporariamente para não sofrer com falta de memória:
 
 ```bash
 umount /var/tmp/portage
