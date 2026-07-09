@@ -45,4 +45,4 @@ Declare a variável personalizada para habilitar a execução:
 echo 'DARKELF_FEATURES="postmerge_distclean"' | sudo tee -a /etc/portage/make.conf
 
 ```
-Fonte: [A more drastic approach to save disk space](https://wiki.gentoo.org/wiki/Knowledge_Base:Remove_obsoleted_distfiles) - Gentoo WIKI
+Fonte: [Remove obsoleted distfiles](https://wiki.gentoo.org/wiki/Knowledge_Base:Remove_obsoleted_distfiles) - Gentoo WIKI
