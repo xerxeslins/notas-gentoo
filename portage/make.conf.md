@@ -11,6 +11,7 @@ CXXFLAGS="${COMMON_FLAGS}"
 FCFLAGS="${COMMON_FLAGS}"
 FFLAGS="${COMMON_FLAGS}"
 LC_MESSAGES=C.UTF-8
+L10N="pt-BR"
 USE="dist-kernel -webengine jumbo-build"
 GRUB_PLATFORMS="efi-64"
 FEATURES="getbinpkg binpkg-request-signature"
