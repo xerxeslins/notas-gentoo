@@ -33,8 +33,8 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Adicionar impressoras](scripts/printer_manager.md) — Script que instala impressoras de rede automaticamente ou inserindo o IP.
 
 ### Customização, Fontes e Codecs
-* [Fontes](sistema/fontes.md) — Fontes Microsoft e outras.
-* [Codecs](sistema/codecs.md) — Instalação de codecs.
+* [Fontes](custom/fontes.md) — Fontes Microsoft e outras.
+* [Codecs](custom/codecs.md) — Instalação de codecs.
 * [Compactadores](sistema/compactadores.md) — Ferramentas de compactação.
 * [Conky](sistema/conky.md) — Simples Conky.
 
