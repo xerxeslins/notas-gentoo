@@ -36,6 +36,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Fontes](sistema/fontes.md) — Fontes Microsoft e outras.
 * [Codecs](sistema/codecs.md) — Instalação de codecs.
 * [Compactadores](sistema/compactadores.md) — Ferramentas de compactação.
+* [Conky](sistema/conky.md) — Simples Conky.
 
 ### Resolução de problemas
 * [Spectacle não grava vídeo](problemas/spectacle.md) — Como resolver o problema do Spectacle que não grava vídeo.
