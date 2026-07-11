@@ -123,21 +123,47 @@ pdfnoimg() {
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 # --- FIM MEUS ALIASES ---
 
+# Checar distfiles e avisar quando estiver cheio
+#
 # Check distfiles size on login
-check_distfiles_space() {
-    local DISTDIR="/var/cache/distfiles"
-    local LIMIT_GB=10
-    
-    if [ -d "$DISTDIR" ]; then
-        local size_kb=$(du -sk "$DISTDIR" | cut -f1)
-        local limit_kb=$((LIMIT_GB * 1048576))
-        
-        if [ "$size_kb" -gt "$limit_kb" ]; then
-            local size_gb=$(awk "BEGIN {printf \"%.2f\", $size_kb/1048576}")
-            echo -e "\e[1;33m[Aviso]\e[0m distfiles ocupando ${size_gb}GB totais (Ativos + Obsoletos)."
-            echo -e "Use \e[1;32msudo eclean-dist --deep\e[0m para limpar ou aumente o limite de ${LIMIT_GB}GB no ~/.bashrc."
-        fi
+# check_distfiles_space() {
+#    local DISTDIR="/var/cache/distfiles"
+#    local LIMIT_GB=10
+#    
+#    if [ -d "$DISTDIR" ]; then
+#        local size_kb=$(du -sk "$DISTDIR" | cut -f1)
+#        local limit_kb=$((LIMIT_GB * 1048576))
+#        
+#        if [ "$size_kb" -gt "$limit_kb" ]; then
+#            local size_gb=$(awk "BEGIN {printf \"%.2f\", $size_kb/1048576}")
+#            echo -e "\e[1;33m[Aviso]\e[0m distfiles ocupando ${size_gb}GB totais (Ativos + Obsoletos)."
+#            echo -e "Use \e[1;32msudo eclean-dist --deep\e[0m para limpar ou aumente o limite de ${LIMIT_GB}GB no ~/.bashrc."
+#        fi
+#    fi
+#}
+#check_distfiles_space
+
+############################################
+# Congelar e descongelar pacotes em certas versões
+# Exemplos de uso:
+# freeze sys-kernel/gentoo-kernel 7.1.3
+# freeze www-client/chromium 149.0.7827.200
+# unfreeze sys-kernel/gentoo-kernel
+
+freeze() {
+    if [ -z "$1" ] || [ -z "$2" ]; then
+        echo "Uso: freeze <categoria/pacote> <versão>"
+        return 1
     fi
+    sudo mkdir -p /etc/portage/package.mask
+    echo ">$1-$2" | sudo tee "/etc/portage/package.mask/${1##*/}" > /dev/null
 }
-check_distfiles_space
+
+unfreeze() {
+    if [ -z "$1" ]; then
+        echo "Uso: unfreeze <categoria/pacote>"
+        return 1
+    fi
+    sudo rm -f "/etc/portage/package.mask/${1##*/}"
+}
 ```
