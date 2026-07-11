@@ -50,6 +50,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Desmascarar](manutencao/unmask.md) — Como desmascarar um pacote.
 * [Limpeza de distfiles](manutencao/distfiles.md) — Limpeza de arquivos de código-fonte.
 * [Limeza automatizada de distfiles](manutencao/postmerge_distclean.md) — Limpeza de arquivos de código-fonte de forma automática.
+* [Congelar pacotes](manutencao/congelar.md) — Como congelar e descongelar programas em determinadas versões.
 
 ### Jogos
 * [DOOMRETRO](jogos/doomretro.md) — Instalação do DOOMRETRO.
