@@ -11,6 +11,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Portage com Git](portage/git.md) — Como sincronizar o repositório do Gentoo com Git.
 * [tmpfs](portage/tmpfs.md) — Configuração de tmpfs.
 * [env low_ram](portage/low_ram.md) — Configuração para compilar com pouca RAM.
+* [Mirrorselect](portage/mirrorselect.md) — Otimizar velocidade do Portage.
 
 ### Configuração do Sistema e Ferramentas
 * [Compilação do gentoo-kernel](sistema/kernel.md) — Passos para compilar o kernel do Gentoo (nome e CPU).
