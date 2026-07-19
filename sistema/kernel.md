@@ -3,6 +3,7 @@
 Obs.: se estiver usando TMPFS, talvez seja o caso de desativá-la temporariamente para não sofrer com falta de memória:
 
 ```bash
+sudo fuser -k -m /var/tmp/portage
 sudo umount /var/tmp/portage
 sudo rm -rf /var/tmp/portage/*
 
