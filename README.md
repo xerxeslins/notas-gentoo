@@ -54,6 +54,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Limeza automatizada de distfiles](manutencao/postmerge_distclean.md) — Limpeza de arquivos de código-fonte de forma automática.
 * [Limpeza profunda](manutencao/limpeza.md) — Limpeza de mais arquivos para ganhar espaço em disco.
 * [Congelar pacotes](manutencao/congelar.md) — Como congelar e descongelar programas em determinadas versões.
+* [Remover kernels antigos](manutencao/remover_kernels.md) — Comandos para remoção de kernels antigos.
 
 ### Jogos
 * [DOOMRETRO](jogos/doomretro.md) — Instalação do DOOMRETRO.
