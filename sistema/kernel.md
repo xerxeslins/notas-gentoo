@@ -26,14 +26,15 @@ EOF
 
 ```bash
 sudo ebuild $(equery w sys-kernel/gentoo-kernel) prepare
-cd "$(ls -dt /var/tmp/portage/sys-kernel/gentoo-kernel-*/work/linux-* | head -n 1)"
+sudo su
+cd /var/tmp/portage/sys-kernel/gentoo-kernel-[VERSAO.RELEASE]/work/linux-[VERSAO]
 
 ```
 
 ### 3. Configurar o Kernel
 
 ```bash
-sudo make menuconfig
+make menuconfig
 
 ```
 
@@ -47,8 +48,8 @@ Realize estritamente as três alterações abaixo:
 ### 4. Exportar configuração
 
 ```bash
-sudo mkdir -p /etc/portage/savedconfig/sys-kernel
-sudo cp .config /etc/portage/savedconfig/sys-kernel/gentoo-kernel
+mkdir -p /etc/portage/savedconfig/sys-kernel
+cp .config /etc/portage/savedconfig/sys-kernel/gentoo-kernel
 
 ```
 
@@ -56,14 +57,14 @@ sudo cp .config /etc/portage/savedconfig/sys-kernel/gentoo-kernel
 
 ```bash
 cd /
-sudo emerge --ask --verbose sys-kernel/gentoo-kernel
+emerge --ask --verbose sys-kernel/gentoo-kernel
 
 ```
 
 ### 6. Configurar link simbólico
 
 ```bash
-sudo eselect kernel list
-sudo eselect kernel set <NUMERO_DA_VERSAO>
+eselect kernel list
+eselect kernel set <NUMERO_DA_VERSAO>
 
 ```
