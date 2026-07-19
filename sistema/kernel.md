@@ -1,19 +1,25 @@
 ## Compilação do gentoo-kernel (Otimização e Prevenção de Erros)
 
-**Obs.:** se estiver usando `TMPFS`, talvez seja o caso de desativá-la temporariamente para não sofrer com falta de memória:
+Obs.: se estiver usando TMPFS, talvez seja o caso de desativá-la temporariamente para não sofrer com falta de memória:
 
 ```bash
-umount /var/tmp/portage
-rm -rf /var/tmp/portage/*
+sudo umount /var/tmp/portage
+sudo rm -rf /var/tmp/portage/*
+
 ```
 
-Procedimento para compilar `sys-kernel/gentoo-kernel` otimizado para CPU nativa, com nome personalizado e correção de erro de compilação BTF (comum no `amdgpu`), mantendo a automação do `dist-kernel` (initramfs e GRUB).
+Procedimento para compilar `sys-kernel/gentoo-kernel` otimizado para CPU nativa, com nome personalizado e correção de erro de compilação BTF (comum no amdgpu), mantendo a automação do dist-kernel (initramfs e GRUB).
 
-### 1. Habilitar versão instável e USE flag (savedconfig)
+### 1. Desmascarar, habilitar versão instável e USE flag (savedconfig)
+
+Verifique a versão com `eix gentoo-kernel`. Se a versão desejada estiver precedida por `[m]` (conforme exibido na image_518cf7.png), ela está mascarada (`hard-masked`). É necessário adicionar uma entrada no diretório `package.unmask` para liberá-la.
+
+Execute o bloco de comandos para criar os diretórios necessários, desmascarar o pacote, aceitar a ramificação instável e definir a flag `savedconfig`:
 
 ```bash
-sudo mkdir -p /etc/portage/package.accept_keywords /etc/portage/package.use
+sudo mkdir -p /etc/portage/package.accept_keywords /etc/portage/package.use /etc/portage/package.unmask
 
+echo "sys-kernel/gentoo-kernel" | sudo tee /etc/portage/package.unmask/kernel
 echo "sys-kernel/gentoo-kernel ~amd64" | sudo tee /etc/portage/package.accept_keywords/kernel
 
 cat << 'EOF' | sudo tee /etc/portage/package.use/kernel
