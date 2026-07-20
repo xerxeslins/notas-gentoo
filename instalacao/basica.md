@@ -20,14 +20,13 @@ Atenção: Os comandos abaixo destroem os dados do disco `/dev/nvme0n1`.
 ```bash
 parted -a optimal /dev/nvme0n1
 ```
-
-> mklabel gpt
-> unit mib
-> mkpart ESP 1 1024
-> set 1 boot on
-> mkpart Swap 1024 5120
-> mkpart Root 5120 -1
-> q
+mklabel gpt
+unit mib
+mkpart ESP 1 1024
+set 1 boot on
+mkpart Swap 1024 5120
+mkpart Root 5120 -1
+q
 
 ```bash
 mkfs.vfat -F 32 /dev/nvme0n1p1
