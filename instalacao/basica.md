@@ -20,6 +20,7 @@ Atenção: Os comandos abaixo destroem os dados do disco `/dev/nvme0n1`.
 ```bash
 parted -a optimal /dev/nvme0n1
 ```
+```
 mklabel gpt
 unit mib
 mkpart ESP 1 1024
@@ -27,7 +28,7 @@ set 1 boot on
 mkpart Swap 1024 5120
 mkpart Root 5120 -1
 q
-
+```
 ```bash
 mkfs.vfat -F 32 /dev/nvme0n1p1
 mkswap /dev/nvme0n1p2 && swapon /dev/nvme0n1p2
@@ -42,6 +43,7 @@ mkfs.ext4 /dev/nvme0n1p3
 ```bash
 mkdir -p /mnt/gentoo/efi
 mount /dev/nvme0n1p3 /mnt/gentoo
+mkdir -p /mnt/gentoo/efi
 mount /dev/nvme0n1p1 /mnt/gentoo/efi
 
 cd /mnt/gentoo
