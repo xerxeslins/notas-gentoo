@@ -20,7 +20,7 @@ Atenção: Os comandos abaixo destroem os dados do disco `/dev/nvme0n1`.
 ```bash
 parted -a optimal /dev/nvme0n1
 ```
-```
+```text
 mklabel gpt
 unit mib
 mkpart ESP 1 1024
