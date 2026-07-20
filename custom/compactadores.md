@@ -6,7 +6,7 @@ Instale os pacotes mais comuns:
 sudo emerge --ask \
     app-arch/zip \
     app-arch/unzip \
-    app-arch/p7zip \
+    app-arch/7zip \
     app-arch/unrar \
     app-arch/rar \
     app-arch/lz4 \
