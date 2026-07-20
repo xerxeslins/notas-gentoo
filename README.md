@@ -39,6 +39,7 @@ Notas técnicas, procedimento de instalação, configurações de pós-instalaç
 * [Compactadores](custom/compactadores.md) — Ferramentas de compactação.
 * [Conky](custom/conky.md) — Simples Conky.
 * [IA Local no Terminal](custom/sgpt.md) — Ollama e Shell-GPT no Gentoo (OpenRC).
+* [Hostname (OpenRC)](custom/hostname.md) — Mudar o nome da máquina no OpenRC.
 
 ### Resolução de problemas
 * [Spectacle não grava vídeo](problemas/spectacle.md) — Como resolver o problema do Spectacle que não grava vídeo.
